@@ -1,7 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="015cfdce-b6c4-48fa-a8e2-4da7358b48b5" name="Default" comment="" />
+    <list default="true" id="015cfdce-b6c4-48fa-a8e2-4da7358b48b5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Home.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Jobs.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/Thank.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/job_categories_model.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/job_locations_model.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/Applicants/ajax_applicants_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/Jobs/detail_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/Jobs/update_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/home_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/job_apply_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/job_details_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/job_list_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/frontend/thankyou_view.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/frontend_template.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/candidates/candidates_list_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/candidates/upload_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/schools/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/schools/update_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/supervisors/create_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/supervisors/list_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/supervisors/supervisors_list_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/supervisors/update_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/application/views/admin/supervisors/upload_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/frontend/fonts/fonts.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session055fe9242b2bdd7dd70eecb6b82c377f068e0c30" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session06a57157f1a24d1592d6b77f42bec1dac5029e01" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session0d4b37ee6d2ab554b2aa526c8a2c5b714b27feb6" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session0f21cf49ae16af47421b926076f0c949b0632f4e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session1c7fc3796f46a2e3a53580c45e87c53281d8c912" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session201d554afdbe0f4e0d0deefcb604b7fb19608e27" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session2027c85bb861e58b2faeb83581274bb2a3d60d95" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session261669d1b55975909e6cddc1694dfbade49221cf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session29e2edef72a51ac89696ca965615c6235ac1ac9e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session2ceba96d85e319f16dc6260f670eac5eea991a8e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session416bf187ee3f9e8884b9c828f32e12e1972b1142" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session41861df2eb495e68f3e83aaf858581c69d1844bf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session41b70e27f4871b00d1ed9bccfa41383b656342ee" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session433361e13a5130cbe405b702924de290e0dad2d0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session437640dd66df2947033cffbce51a4e3535435bcb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session4cfce3b9a2cec2eeb8d7245d0bf7129f7a141c65" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session4e1c78fa703c9875c5ca528640a6a54ede98d80b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session4e4bb3ce5e884da121ad4ac3af4a947ba30fe75a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session4f19130ef249bf1e1a960e71126af1e90c84b05c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session5338155a6f8c3c44867d0517a815a88944a14901" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session5c6979d8ccff792ddb03ee7e1417f48102f187bd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session5ec7556af4970976e0aefd61d12996e4a176a3db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session63ea49504d9f662aa2e87907b77208c1c2f941f1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session644e4e0532f51c5b727a5d8da4216a55273a3020" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session68d5eadc7839fdea0e81b481a25d9a6c36f6ff72" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session6ef6c34b63ffea4be9f837d105ea8d0c6ab36b10" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session70944937f2dee8014dc6716e121a9f8a9b620daf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session726729020842542fc6c04684a47ded068a59d2f4" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session73e011d214d9acbe5c804e80de8417bd05b34321" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session85b1a14dcaf445b0e4dfa4222b2e04807aad167b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session97c075812ae1c3b4476a975d1f37940a3e2d1276" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session9cc7752312d1d623e44e970afec5aa6d2b8516ae" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_session9dfed4dab9858a9a36ac99fff1d1b958fcd31575" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessiona3fca63875e3da7a068be799520e449e2ee75427" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessiona8367e21604c05cabd0f475899c408ba08940cfa" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessiona99a749a11998465f58f5d826e6b3f484f3eda06" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionace24bf972ad63f056a70ec4af4fe0586ed974bc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionb50aae2351712ecd83dfabb0f1fba05d40572d1d" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionb72b67f9c7adc7b45e2d4b11f206febcd0cfdcfc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionb7621f957bec97b8bfb8e7423f5ab9c53e43b380" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionba6da02afb824b3897220c2b6ec58312189de88b" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionc232c278ad4ede2c711df8b8be526b3c38d85a7e" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessioncc94bfcfe5957897704ec565c1d3ccef71058299" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessioncecb1649ab373083bea654cbc455bae294f12e12" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessioncf82cb11e68d73c4433c58a1d67c29a3f39ca6b3" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessiond8ca8da2bf79bbcecd3cc17f27c57c897223c3fd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessione7c939d14a46b8e070c5f3fa832fcc67236891e0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessioned9f087bca245f6c4617cbb6e6f1b92624758c53" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionf0d6b04acb33a38aecf77a9776d1b3a982cd911a" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionf3b9e00cb507ccf5fc08b986aac00f2794d20ad8" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionf9e057ef6cf5a93a3baddacb64115fa1c29a6cbf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/system/cache/ci_sessionfa450a06fb3d0b9be699e36601b13be21d12eda3" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/candidates/create_view.php" afterPath="$PROJECT_DIR$/application/views/admin/Applicants/create_view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/candidates/index.html" afterPath="$PROJECT_DIR$/application/views/admin/Applicants/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/candidates/list_view.php" afterPath="$PROJECT_DIR$/application/views/admin/Applicants/list_view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/candidates/update_view.php" afterPath="$PROJECT_DIR$/application/views/admin/Applicants/update_view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/schools/create_view.php" afterPath="$PROJECT_DIR$/application/views/admin/Jobs/create_view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/schools/detail_view.php" afterPath="$PROJECT_DIR$/application/views/admin/Applicants/detail_view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/schools/list_view.php" afterPath="$PROJECT_DIR$/application/views/admin/Jobs/list_view.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/supervisors/index.html" afterPath="$PROJECT_DIR$/application/views/admin/Jobs/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/images/button_apply.png" afterPath="$PROJECT_DIR$/assets/frontend/images/button_apply.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="$PROJECT_DIR$/application/config/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="$PROJECT_DIR$/application/config/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/site.constants.config.php" afterPath="$PROJECT_DIR$/application/config/site.constants.config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Applicants.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Applicants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/Jobs.php" afterPath="$PROJECT_DIR$/application/controllers/admin/Jobs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/helpers/common_helper.php" afterPath="$PROJECT_DIR$/application/helpers/common_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Applicants_model.php" afterPath="$PROJECT_DIR$/application/models/Applicants_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/Jobs_model.php" afterPath="$PROJECT_DIR$/application/models/Jobs_model.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/dashboard_view.php" afterPath="$PROJECT_DIR$/application/views/admin/dashboard_view.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/admin_template.php" afterPath="$PROJECT_DIR$/application/views/templates/admin_template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/Job-listing.html" afterPath="$PROJECT_DIR$/assets/frontend/Job-listing.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/css/responsive.css" afterPath="$PROJECT_DIR$/assets/frontend/css/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/css/resposive-slider.css" afterPath="$PROJECT_DIR$/assets/frontend/css/resposive-slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/css/style-slider.css" afterPath="$PROJECT_DIR$/assets/frontend/css/style-slider.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/css/styles.css" afterPath="$PROJECT_DIR$/assets/frontend/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Bold-webfont.svg" afterPath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Bold-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Italic-webfont.svg" afterPath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Italic-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Light-webfont.svg" afterPath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Light-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Regular-webfont.svg" afterPath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Regular-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Semibold-webfont.svg" afterPath="$PROJECT_DIR$/assets/frontend/fonts/OpenSans-Semibold-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/form.html" afterPath="$PROJECT_DIR$/assets/frontend/form.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/index.html" afterPath="$PROJECT_DIR$/assets/frontend/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/job-detail.html" afterPath="$PROJECT_DIR$/assets/frontend/job-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/js/html5shiv.min.js" afterPath="$PROJECT_DIR$/assets/frontend/js/html5shiv.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/js/index.js" afterPath="$PROJECT_DIR$/assets/frontend/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/js/jquery-1.12.0.min.js" afterPath="$PROJECT_DIR$/assets/frontend/js/jquery-1.12.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/frontend/js/respond.min.js" afterPath="$PROJECT_DIR$/assets/frontend/js/respond.min.js" />
+    </list>
     <ignored path="career.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -22,83 +136,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <file leaf-file-name="Jobs.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Jobs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="29" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="29" />
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin_template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/admin_template.php">
+      <file leaf-file-name="Applicants.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Applicants.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.5">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Jobs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Jobs.php">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Jobs.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.692307">
-              <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+            <state vertical-scroll-proportion="-7.8846154">
+              <caret line="252" column="26" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="26" />
+              <folding>
+                <marker date="1459488466114" expanded="true" signature="7772:8891" placeholder="..." />
+                <marker date="1459488466114" expanded="true" signature="7807:7819" placeholder="..." />
+                <marker date="1459488466114" expanded="true" signature="7820:7897" placeholder="..." />
+                <marker date="1459488466114" expanded="true" signature="7820:8863" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common_helper.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/helpers/common_helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.727758">
+              <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Applicants_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Applicants_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <marker date="1458670395013" expanded="true" signature="657:918" placeholder="SELECT `cand..candidates..." />
-                <marker date="1458670395013" expanded="true" signature="1075:1387" placeholder="SELECT `cand..candidates..." />
-                <marker date="1458670395013" expanded="true" signature="1541:1875" placeholder="SELECT `cand..candidates..." />
-                <marker date="1458670395013" expanded="true" signature="2089:2411" placeholder="SELECT `cand..candidates..." />
-                <marker date="1458670395013" expanded="true" signature="2558:3064" placeholder="SELECT CAST(..candidates..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Jobs_model.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/Jobs_model.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29310346">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <marker date="1458670403285" expanded="true" signature="744:1276" placeholder="SELECT `scho..schools..." />
-                <marker date="1458670403285" expanded="true" signature="1549:2262" placeholder="SELECT `scho..schools..." />
-                <marker date="1458670403285" expanded="true" signature="2420:2939" placeholder="SELECT `scho..schools..." />
-                <marker date="1458670403285" expanded="true" signature="3071:3671" placeholder="SELECT schoo..candidates..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/index.html">
+      <file leaf-file-name="detail_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/Jobs/detail_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
+              <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/frontend/home_view.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MY_Email.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/libraries/MY_Email.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login_template.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/templates/login_template.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-              <folding />
+              <folding>
+                <marker date="1459444692186" expanded="true" signature="21195:23717" placeholder="..." />
+                <marker date="1459444692186" expanded="true" signature="21202:23678" placeholder="..." />
+                <marker date="1459444692186" expanded="true" signature="21484:23669" placeholder="..." />
+                <marker date="1459444692186" expanded="true" signature="21739:21948" placeholder="{...}" />
+                <marker date="1459444692186" expanded="true" signature="22534:22746" placeholder="{...}" />
+                <marker date="1459444692186" expanded="true" signature="22840:23054" placeholder="{...}" />
+                <marker date="1459444692186" expanded="true" signature="23686:23709" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -107,33 +223,36 @@
         <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashboard.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/admin/Dashboard.php">
+      <file leaf-file-name="ajax_applicants_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/Applicants/ajax_applicants_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="80" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="80" />
+              <caret line="39" column="79" selection-start-line="38" selection-start-column="21" selection-end-line="39" selection-end-column="100" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dashboard_model.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/Dashboard_model.php">
+      <file leaf-file-name="list_view.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/Applicants/list_view.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -142,11 +261,35 @@
         <option value="$PROJECT_DIR$/application/views/templates/login_template.php" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Dashboard.php" />
         <option value="$PROJECT_DIR$/application/models/Dashboard_model.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/dashboard_view.php" />
-        <option value="$PROJECT_DIR$/application/views/templates/admin_template.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/Jobs.php" />
+        <option value="$PROJECT_DIR$/application/models/District_model.php" />
+        <option value="$PROJECT_DIR$/application/models/job_categories_model.php" />
+        <option value="$PROJECT_DIR$/application/libraries/Ajax_pagination.php" />
         <option value="$PROJECT_DIR$/application/models/Applicants_model.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/home.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Home.php" />
         <option value="$PROJECT_DIR$/application/models/Jobs_model.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/Jobs/list_view.php" />
+        <option value="$PROJECT_DIR$/application/models/job_locations_model.php" />
+        <option value="$PROJECT_DIR$/application/config/site.constants.config.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Thankyou.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/thankyou_view.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/frontend_template.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/job_apply_view.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/Jobs/update_view.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/Jobs/create_view.php" />
+        <option value="$PROJECT_DIR$/application/views/templates/admin_template.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/job_details_view.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/job_list_view.php" />
+        <option value="$PROJECT_DIR$/application/views/frontend/home_view.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/dashboard_view.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/Applicants/ajax_applicants_view.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/Jobs/detail_view.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Jobs.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/Applicants.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Api.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Jobs.php" />
+        <option value="$PROJECT_DIR$/application/helpers/common_helper.php" />
       </list>
     </option>
   </component>
@@ -160,10 +303,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -280,6 +423,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="frontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -298,7 +463,95 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Jobs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Applicants" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="career" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,6 +623,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aravind\Codes\career\application\controllers" />
+      <recent name="C:\Users\aravind\Codes\career\application\models" />
+      <recent name="C:\Users\aravind\Codes\career\application\views\templates" />
+      <recent name="C:\Users\aravind\Codes\career\application\views\admin\Applicants" />
+      <recent name="C:\Users\aravind\Codes\career\application\views\admin\Jobs" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
@@ -414,10 +676,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="1" y="1" width="1364" height="726" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1698813" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -452,19 +714,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="29" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/templates/admin_template.php">
+    <entry file="file://$PROJECT_DIR$/application/models/Jobs_model.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -472,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -480,7 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -488,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -496,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="80" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -504,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -512,7 +760,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="29" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="29" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/admin_template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -520,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -528,23 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Dashboard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="80" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Dashboard_model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -552,50 +788,356 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="80" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Dashboard_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="41" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="19" selection-end-line="69" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/login_template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Dashboard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="80" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Dashboard_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="47" selection-start-line="9" selection-start-column="8" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Applicants/detail_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/db.constants.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Ajax_pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4103448">
+          <caret line="132" column="70" selection-start-line="132" selection-start-column="70" selection-end-line="132" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3189656">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/job_categories_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7034483">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Applicants_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.192307">
+          <caret line="29" column="32" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2017242">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/Jobs_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="30" selection-start-line="68" selection-start-column="30" selection-end-line="68" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.076923">
+          <caret line="55" column="36" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Jobs/list_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="65" column="71" selection-start-line="65" selection-start-column="71" selection-end-line="65" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Applicants/create_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.31896552">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/job_locations_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/site.constants.config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.153846">
+          <caret line="81" column="68" selection-start-line="81" selection-start-column="68" selection-end-line="81" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Thank.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55689657">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/templates/frontend_template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="100" selection-start-line="89" selection-start-column="100" selection-end-line="89" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/thankyou_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="137" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/job_apply_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-43.153847">
+          <caret line="66" column="73" selection-start-line="66" selection-start-column="73" selection-end-line="66" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Jobs/create_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="67" column="103" selection-start-line="67" selection-start-column="103" selection-end-line="67" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/admin_template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.5">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="-59.846153">
+          <caret line="136" column="57" selection-start-line="136" selection-start-column="57" selection-end-line="136" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/job_details_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Jobs/update_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8461537">
+          <caret line="43" column="47" selection-start-line="39" selection-start-column="35" selection-end-line="43" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/job_list_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.653847">
+          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/dashboard_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Applicants/list_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Applicants/ajax_applicants_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="79" selection-start-line="38" selection-start-column="21" selection-end-line="39" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/Jobs/detail_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/Applicants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/frontend/home_view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/Jobs.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.692307">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Applicants_model.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.21352313">
+          <caret line="199" column="20" selection-start-line="199" selection-start-column="20" selection-end-line="199" selection-end-column="28" />
           <folding>
-            <marker date="1458670395013" expanded="true" signature="657:918" placeholder="SELECT `cand..candidates..." />
-            <marker date="1458670395013" expanded="true" signature="1075:1387" placeholder="SELECT `cand..candidates..." />
-            <marker date="1458670395013" expanded="true" signature="1541:1875" placeholder="SELECT `cand..candidates..." />
-            <marker date="1458670395013" expanded="true" signature="2089:2411" placeholder="SELECT `cand..candidates..." />
-            <marker date="1458670395013" expanded="true" signature="2558:3064" placeholder="SELECT CAST(..candidates..." />
+            <marker date="1459444726362" expanded="true" signature="8512:10365" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="8555:8569" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="8570:10329" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="8611:8658" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="8684:8698" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="9230:9244" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="9464:9546" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="9709:9723" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="9863:9877" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="10009:10023" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="10138:10152" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="10451:12300" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="10494:10508" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="10509:12264" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="10550:10597" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="10623:10637" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="11127:11141" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="11399:11481" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="11644:11658" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="11798:11812" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="11944:11958" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="12073:12087" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="12388:14412" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="12431:12445" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="12446:14376" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="12487:12534" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="12560:12574" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="13010:13024" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="13280:13294" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="13511:13593" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="13756:13770" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="13910:13924" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="14056:14070" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="14185:14199" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="14497:16287" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="14540:14554" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="14555:16251" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="14596:14643" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="14669:14683" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="15114:15128" placeholder="..." />
+            <marker date="1459444726362" expanded="true" signature="15386:15468" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="15631:15645" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="15785:15799" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="15931:15945" placeholder="..." />
+            <marker date="1459444726362" expanded="false" signature="16060:16074" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/Jobs_model.php">
+    <entry file="file://$PROJECT_DIR$/application/libraries/MY_Email.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29310346">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1458670403285" expanded="true" signature="744:1276" placeholder="SELECT `scho..schools..." />
-            <marker date="1458670403285" expanded="true" signature="1549:2262" placeholder="SELECT `scho..schools..." />
-            <marker date="1458670403285" expanded="true" signature="2420:2939" placeholder="SELECT `scho..schools..." />
-            <marker date="1458670403285" expanded="true" signature="3071:3671" placeholder="SELECT schoo..candidates..." />
+            <marker date="1459444692186" expanded="true" signature="21195:23717" placeholder="..." />
+            <marker date="1459444692186" expanded="true" signature="21202:23678" placeholder="..." />
+            <marker date="1459444692186" expanded="true" signature="21484:23669" placeholder="..." />
+            <marker date="1459444692186" expanded="true" signature="21739:21948" placeholder="{...}" />
+            <marker date="1459444692186" expanded="true" signature="22534:22746" placeholder="{...}" />
+            <marker date="1459444692186" expanded="true" signature="22840:23054" placeholder="{...}" />
+            <marker date="1459444692186" expanded="true" signature="23686:23709" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/Jobs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8846154">
+          <caret line="252" column="26" selection-start-line="252" selection-start-column="17" selection-end-line="252" selection-end-column="26" />
+          <folding>
+            <marker date="1459488466114" expanded="true" signature="7772:8891" placeholder="..." />
+            <marker date="1459488466114" expanded="true" signature="7807:7819" placeholder="..." />
+            <marker date="1459488466114" expanded="true" signature="7820:7897" placeholder="..." />
+            <marker date="1459488466114" expanded="true" signature="7820:8863" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/common_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.727758">
+          <caret line="158" column="42" selection-start-line="158" selection-start-column="42" selection-end-line="158" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>

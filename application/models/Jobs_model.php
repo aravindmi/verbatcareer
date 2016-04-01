@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Admin_model Class 
+ * Jobs_model Class
  * @package Webpagetest
  * @subpackage admin
  * @category Controller
@@ -15,51 +15,27 @@ class Jobs_model extends MY_Model {
         parent::__construct();
 
 
-        $this->_table_schools = $this->config->item('TBL_SCHOOLS', 'DB_TABLES');;
-        $this->_table_districts = 'districts';
-        $this->_table_states = 'states';
-        $this->_table_candidates = $this->config->item('TBL_CANDIDATES', 'DB_TABLES');
+        $this->jobs_table = 'jobs';
+        $this->applicants_table = 'applicants';
 
-        $this->_table = $this->_table_schools;
-        $this->primary_key = 'school_id';
+        $this->_table = $this->jobs_table;
+        $this->primary_key = 'job_id';
     }
 
-    function getAllSchools($order_by = '') {
+    function get_all_jobs($order_by = '') {
 
         if($order_by == ''){
 
-            $order_by = '`districts`.`district_name`';
+            $order_by = '`jobs`.`created_at`';
         }
 
-        $sql = "SELECT `schools`.*,`districts`.`district_name`, COUNT(candidates.candidate_id) AS candidates_count
-                FROM `schools`
-                LEFT JOIN `districts` ON `districts`.`id` =`schools`.`district_id`
-                LEFT JOIN `states` ON `states`.`id` =`schools`.`state_id`
-                LEFT JOIN `candidates` ON (`candidates`.`school_id` =`schools`.`school_id` AND `candidates`.`deleted` = '0')
-                WHERE `schools`.`deleted` = '0'
-                GROUP BY `schools`.`school_id`
-                ORDER BY ".$order_by;
-        $result = $this->db->query($sql);
-
-        return $result->result();
-
-    }
-
-    function getAllSchools_supervisor_count($order_by = '') {
-
-        if($order_by == ''){
-
-            $order_by = '`districts`.`district_name`';
-        }
-
-        $sql = "SELECT `schools`.*,`districts`.`district_name`, COUNT(candidates.candidate_id) AS candidates_count,COUNT(supervisors.supervisor_id) AS supervisor_count
-                FROM `schools`
-                LEFT JOIN `districts` ON `districts`.`id` =`schools`.`district_id`
-                LEFT JOIN `states` ON `states`.`id` =`schools`.`state_id`
-                LEFT JOIN `candidates` ON (`candidates`.`school_id` =`schools`.`school_id` AND `candidates`.`deleted` = '0')
-                LEFT JOIN `supervisors` ON (`supervisors`.`school_id` =`schools`.`school_id` AND `supervisors`.`deleted` = '0')
-                WHERE `schools`.`deleted` = '0'
-                GROUP BY `schools`.`school_id`
+        $sql = "SELECT `jobs`.*,`job_categories`.*,`job_locations`.*, COUNT(applicants.applicant_id) AS application_count
+                FROM `jobs`
+                LEFT JOIN `applicants` ON (`applicants`.`job_id` =`jobs`.`job_id` AND `applicants`.`deleted` = '0')
+                LEFT JOIN `job_categories` ON `jobs`.`job_category_id` =`job_categories`.`job_category_id`
+                LEFT JOIN `job_locations` ON `jobs`.`job_location_id` =`job_locations`.`job_location_id`
+                WHERE `jobs`.`deleted` = '0'
+                GROUP BY `jobs`.`job_id`
                 ORDER BY ".$order_by;
         $result = $this->db->query($sql);
 
@@ -68,30 +44,26 @@ class Jobs_model extends MY_Model {
     }
 
 
+    function get_job_by_slug($job_slug) {
 
-    function getOneSchools($school_id) {
-
-        $sql = "SELECT `schools`.*,`districts`.`district_name`,`states`.`state_name`,COUNT(candidates.candidate_id) AS candidates_count
-                FROM `schools`
-                LEFT JOIN `districts` ON `districts`.`id` =`schools`.`district_id`
-                LEFT JOIN `states` ON `states`.`id` =`schools`.`state_id`
-                LEFT JOIN `candidates` ON (`candidates`.`school_id` =`schools`.`school_id` AND `candidates`.`deleted` = '0')
-                WHERE `schools`.`deleted` = '0' AND `schools`.`school_id`='$school_id'";
+        $sql = "SELECT `jobs`.*,`job_categories`.*,`job_locations`.*
+                FROM `jobs`
+                LEFT JOIN `job_categories` ON `jobs`.`job_category_id` =`job_categories`.`job_category_id`
+                LEFT JOIN `job_locations` ON `jobs`.`job_location_id` =`job_locations`.`job_location_id`
+                WHERE `jobs`.`deleted` = '0' AND `jobs`.`job_slug`='$job_slug'";
         $result = $this->db->query($sql);
 
         return $result->row();
 
     }
-    function getClasswise() {
 
+    function get_job_by_category($cat_id) {
 
-        $sql = "SELECT schools.school_id,schools.school_name,schools.place,districts.district_name,schools.exam_date,candidates.candidate_class, COUNT(candidates.candidate_id) AS candidates_count
-                    FROM candidates
-                    JOIN schools ON (schools.school_id = candidates.school_id AND schools.deleted ='0')
-                    LEFT JOIN districts on (schools.district_id = districts.id)
-                    WHERE candidates.deleted = '0'
-                    GROUP BY schools.school_id,candidates.candidate_class
-                    ORDER BY schools.exam_date ASC, districts.district_name";
+        $sql = "SELECT `jobs`.*,`job_categories`.*,`job_locations`.*
+                FROM `jobs`
+                LEFT JOIN `job_categories` ON `jobs`.`job_category_id` =`job_categories`.`job_category_id`
+                LEFT JOIN `job_locations` ON `jobs`.`job_location_id` =`job_locations`.`job_location_id`
+                WHERE `jobs`.`deleted` = '0' AND `job_categories`.`job_category_id`='$cat_id' LIMIT 5";
         $result = $this->db->query($sql);
 
         return $result->result();

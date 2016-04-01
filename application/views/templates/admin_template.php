@@ -24,6 +24,10 @@
     <!-- Custom Fonts -->
     <link href="/assets/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Custom CSS -->
+
+    <!-- jQuery -->
+    <script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+
     <style>
 
         [data-sort] {
@@ -129,9 +133,8 @@
                     <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+
+                    <li><a href="<?php echo site_url();?>"><i class="fa fa-gear fa-fw"></i> Visit Site</a>
                     </li>
                     <li class="divider"></li>
                     <li><a href="<?php echo site_url('auth/logout'); ?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
@@ -165,17 +168,17 @@
                     <li>
                         <a href="<?php echo site_url('admin/jobs'); ?>"
                            class="<?php echo isset($menu) && $menu == 'jobs' ? 'active' : ''; ?>"><i
-                                class="fa fa-university fa-fw"></i> Jobs</a>
+                                class="fa fa-university fa-fw"></i> Opportunities</a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="<?php echo site_url('admin/applicants'); ?>"
                            class="<?php echo isset($menu) && $menu == 'applicants' ? 'active' : ''; ?>"><i
                                 class="fa fa-users fa-fw"></i> Applicants</a>
-                    </li>
+                    </li>-->
                     <li>
-                        <a href="<?php echo site_url('admin/users'); ?>"
-                           class="<?php echo isset($menu) && $menu == 'users' ? 'active' : ''; ?>"><i
-                                class="fa fa-bar-chart-o fa-legal"></i> Users</a>
+                        <a href="<?php //echo site_url('admin/reports'); ?>#"
+                           class="<?php echo isset($menu) && $menu == 'reports' ? 'active' : ''; ?>"><i
+                                class="fa fa-bar-chart-o fa-fw"></i> Reports</a>
                     </li>
 
                 </ul>
@@ -222,8 +225,7 @@
 <!-- /#wrapper -->
 
 
-<!-- jQuery -->
-<script src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -235,6 +237,10 @@
 <script src="/assets/dist/js/sb-admin-2.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="/assets/js/stupidtable.min.js"></script>
+<script src="//cdn.ckeditor.com/4.5.7/basic/ckeditor.js"></script>
+
+<?php echo isset($menu) && $menu == 'jobs' ? "<script>CKEDITOR.replace( 'job_description' );</script>" : ''; ?>
+
 <script>
     $(function(){
         var table = $("table").stupidtable();

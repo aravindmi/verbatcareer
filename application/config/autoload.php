@@ -117,7 +117,7 @@ $autoload['helper'] = array('url','file','common');
 |
 */
 
-$autoload['config'] = array('site.constants.config','db.constants.config');
+$autoload['config'] = array('site.constants.config','db.constants.config','recaptcha');
 
 
 /*

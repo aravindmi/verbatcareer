@@ -122,77 +122,41 @@ function is_same($value1, $value2)
     }
 }
 
-function is_grade_count($db_grade, $given_grade)
+
+function show_job_status($raw_id)
 {
-    if (isset($db_grade[$given_grade])) {
-        return $db_grade[$given_grade]['candidate_count'];
-    } else {
-        return 0;
-    }
-}
+    switch ($raw_id) {
 
-function is_grade_amount($db_grade, $given_grade)
-{
-    if (isset($db_grade[$given_grade])) {
-        return $db_grade[$given_grade]['amount'];
-    } else {
-        return 0;
-    }
-}
-
-function get_amountxcount($count, $amount)
-{
-    $total = array();
-    foreach ($count as $key => $value) {
-        $total[] = $value * $amount[$key];
-    }
-
-    return $total;
-}
-
-function conver_classname($raw_name)
-{
-    switch (trim($raw_name)) {
-
-        case "LKG":
-            return "LKG";
-            break;
-        case "UKG":
-            return "UKG";
-            break;
         case "1":
-            return "I";
+            return "<span class=\"label label-success\">Open</span>";
             break;
-        case "2":
-            return "II";
-            break;
-        case "3":
-            return "III";
-            break;
-        case "4":
-            return "IV";
-            break;
-        case "5":
-            return "V";
-            break;
-        case "6":
-            return "VI";
-            break;
-        case "7":
-            return "VII";
-            break;
-        case "8":
-            return "VIII";
-            break;
-        case "9":
-            return "IX";
-            break;
-        case "10":
-            return "X";
+        case "0":
+            return "<span class=\"label label-default\">Close</span>";
             break;
         default:
             return "";
 
+    }
+}
+
+function get_email($job_location)
+{
+    switch ($job_location) {
+
+        case "India":
+            return "miaravindh@gmail.com";
+            break;
+        case "UAE":
+            return "miaravindh@gmail.com";
+            break;
+        case "UK":
+            return "miaravindh@gmail.com";
+            break;
+        case "USA":
+            return "miaravindh@gmail.com";
+            break;
+        default:
+            return "miaravindh@gmail.com";
     }
 }
 

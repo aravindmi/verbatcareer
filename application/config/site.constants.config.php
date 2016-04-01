@@ -74,14 +74,16 @@ $config['TASKSTATUS'] = array(1=>'Scheduled',2=>'In Progress',3=>'Completed');
 $config['PROJECTGRID_PERPAGE'] = '4';
 
 //Product upload config
-$config['CANDIDATE_UPLOAD_PATH'] = 'uploads/candidates'; ///events
-$config['CANDIDATE_UPLOAD_TYPES'] = 'xls|xlsx';
-$config['CANDIDATE_UPLOAD_SIZE_LIMIT'] = '10000';
+$config['CANDIDATE_UPLOAD_PATH'] = 'uploads/resumes'; ///events
+$config['CANDIDATE_UPLOAD_TYPES'] = 'doc|docx|pdf|rtf|txt|xls|xlsx|ppt|pptx';
+$config['CANDIDATE_UPLOAD_SIZE_LIMIT'] = '2000';
 
 //Product upload config
 $config['SUPERVISOR_UPLOAD_PATH'] = 'uploads/supervisors'; ///events
 $config['SUPERVISOR_UPLOAD_TYPES'] = 'xls|xlsx';
 $config['SUPERVISOR_UPLOAD_SIZE_LIMIT'] = '10000';
+
+$config['JOB_STATUS'] = array(1,0);
 
 /* End of file site.constants.php */
 /* Location: ./application/config/site.constants.php */

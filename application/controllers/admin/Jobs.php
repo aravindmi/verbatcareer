@@ -3,7 +3,7 @@
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
-class Candidates extends CI_Controller
+class Jobs extends CI_Controller
 {
 
     public $data;
@@ -18,38 +18,53 @@ class Candidates extends CI_Controller
         }
         $this->load->model('jobs_model');
         $this->load->model('applicants_model');
+        $this->load->model('job_categories_model');
+        $this->load->model('job_locations_model');
 
         $this->_created_at = date("Y-m-d H:i:s");
         $this->_created_by = $this->session->userdata('user_id');
         $this->_updated_at = date("Y-m-d H:i:s");
         $this->_updated_by = $this->session->userdata('user_id');
 
+        $this->load->library('Ajax_pagination');
 
         $this->_created_date = date("d-m-Y");
+
+        $this->perPage = '10';
 
     }
 
     public function index()
     {
 
-        $data['schools'] = $this->school_model->getAllSchools('`schools`.`exam_date`,`districts`.`district_name`');
-        $data['menu'] = 'candidates';
+        $data['jobs'] = $this->jobs_model->get_all_jobs();
+        $data['menu'] = 'jobs';
         //$data['links'] = $this->pagination->create_links();
-        $data['title'] = "List of Schools";
+        $data['title'] = "List of Opportunities";
 
-        $data['page'] = 'admin/candidates/list_view';
+        $data['page'] = 'admin/jobs/list_view';
         $this->load->view('templates/admin_template', $data);
     }
 
     /**
      * Create role
      */
-    function create($school_id)
+    function create()
     {
 
-
-        $this->form_validation->set_rules('candidate_name', 'School Name', "required|trim|max_length[200]");
-        $this->form_validation->set_rules('candidate_class', 'Pricipal Name', 'required|trim|max_length[10]');
+        $this->form_validation->set_rules('job_title', 'Job Title', "required|trim|max_length[200]");
+        $this->form_validation->set_rules('job_slug', 'Job Slug', 'required|trim|max_length[300]|alpha_dash|is_unique[jobs.job_slug]');
+        $this->form_validation->set_rules('job_code', 'Job Code', "required|trim|max_length[200]");
+        $this->form_validation->set_rules('job_category_id', 'Job Category', 'required|trim|max_length[10]|integer');
+        $this->form_validation->set_rules('job_location_id', 'Job Location', "required|trim|max_length[10]|integer");
+        $this->form_validation->set_rules('job_sub_location', 'Job Sub Location', "required|trim|max_length[200]");
+        $this->form_validation->set_rules('job_experience', 'Job Experience', 'required|trim|max_length[100]');
+        $this->form_validation->set_rules('job_vacancies', 'Job Vacancies', "required|trim|max_length[10]|integer");
+        $this->form_validation->set_rules('job_status', 'Job Status', 'required|trim|max_length[1]|integer');
+        $this->form_validation->set_rules('job_description', 'Job Description', "required|trim|max_length[5000]");
+        $this->form_validation->set_rules('job_seo_title', 'Job SEO Title', 'required|trim|max_length[200]');
+        $this->form_validation->set_rules('job_seo_description', 'Job SEO Description', 'required|trim|max_length[500]');
+        $this->form_validation->set_rules('job_logo_text', 'Job Logo Text', 'required|trim|max_length[3]');
 
         $this->form_validation->set_error_delimiters('<span class="help-block has-error">', '</span>');
 
@@ -60,30 +75,43 @@ class Candidates extends CI_Controller
              * Create data to insert
              */
             $insert_data = array(
-                'school_id' => $school_id,
-                'candidate_name' => $this->input->post('candidate_name'),
-                'candidate_class' => $this->input->post('candidate_class'),
+                'job_title' => $this->input->post('job_title'),
+                'job_slug' => $this->input->post('job_slug'),
+                'job_code' => $this->input->post('job_code'),
+                'job_category_id' => $this->input->post('job_category_id'),
+                'job_location_id' => $this->input->post('job_location_id'),
+                'job_sub_location' => $this->input->post('job_sub_location'),
+                'job_experience' => $this->input->post('job_experience'),
+                'job_vacancies' => $this->input->post('job_vacancies'),
+                'job_status' => $this->input->post('job_status'),
+                'job_description' => $this->input->post('job_description'),
+                'job_seo_title' => $this->input->post('job_seo_title'),
+                'job_seo_description' => $this->input->post('job_seo_description'),
+                'job_logo_text' => $this->input->post('job_logo_text'),
                 'created_at' => $this->_created_at,
                 'created_by' => $this->_created_by
             );
 
-            $candidate_id = $this->candidate_model->insert($insert_data);
-            if (!$candidate_id) {
+            $job_id = $this->jobs_model->insert($insert_data);
+
+            if (!$job_id) {
 
                 $this->ci_alerts->set('error', 'Sorry ! failed to save, please try again');
-                redirect("admin/candidates/view/" . $school_id);
+                redirect("admin/jobs");
 
             } else {
 
 
                 $this->ci_alerts->set('success', 'Saved Successfully');
-                redirect("admin/candidates/view/" . $school_id);
+                redirect("admin/jobs");
             }
         } else {
 
-            $data['menu'] = 'candidates';
-            $data['school_data'] = $this->school_model->get($school_id);
-            $data['page'] = 'admin/candidates/create_view';
+            $data['menu'] = 'jobs';
+            $data['page'] = 'admin/jobs/create_view';
+
+            $data['job_categories'] = $this->job_categories_model->get_all();
+            $data['job_locations'] = $this->job_locations_model->get_all();
             $this->load->view('templates/admin_template', $data);
 
         }
@@ -92,11 +120,28 @@ class Candidates extends CI_Controller
     /**
      * Update Users
      */
-    function update($candidate_id, $school_id)
+    function update($job_id, $job_slug)
     {
 
-        $this->form_validation->set_rules('candidate_name', 'School Name', "required|trim|max_length[200]");
-        $this->form_validation->set_rules('candidate_class', 'Pricipal Name', 'required|trim|max_length[10]');
+        if($this->input->post('job_slug') != $job_slug) {
+            $is_unique =  '|is_unique[jobs.job_slug]';
+        } else {
+            $is_unique =  '';
+        }
+
+        $this->form_validation->set_rules('job_title', 'Job Title', "required|trim|max_length[200]");
+        $this->form_validation->set_rules('job_slug', 'Job Slug', 'required|trim|max_length[300]|alpha_dash'.$is_unique);
+        $this->form_validation->set_rules('job_code', 'Job Code', "required|trim|max_length[200]");
+        $this->form_validation->set_rules('job_category_id', 'Job Category', 'required|trim|max_length[10]|integer');
+        $this->form_validation->set_rules('job_sub_location', 'Job Sub Location', "required|trim|max_length[200]");
+        $this->form_validation->set_rules('job_location_id', 'Job Location', "required|trim|max_length[10]|integer");
+        $this->form_validation->set_rules('job_experience', 'Job Experience', 'required|trim|max_length[100]');
+        $this->form_validation->set_rules('job_vacancies', 'Job Vacancies', "required|trim|max_length[10]|integer");
+        $this->form_validation->set_rules('job_status', 'Job Status', 'required|trim|max_length[1]|integer');
+        $this->form_validation->set_rules('job_description', 'Job Description', "required|trim|max_length[5000]");
+        $this->form_validation->set_rules('job_seo_title', 'Job SEO Title', 'required|trim|max_length[200]');
+        $this->form_validation->set_rules('job_seo_description', 'Job SEO Description', 'required|trim|max_length[500]');
+        $this->form_validation->set_rules('job_logo_text', 'Job Logo Text', 'required|trim|max_length[3]');
 
 
         $this->form_validation->set_error_delimiters('<span class="help-block has-error">', '</span>');
@@ -108,103 +153,99 @@ class Candidates extends CI_Controller
              * Create data to insert
              */
             $insert_data = array(
-                'candidate_name' => $this->input->post('candidate_name'),
-                'candidate_class' => $this->input->post('candidate_class'),
-
+                'job_title' => $this->input->post('job_title'),
+                'job_slug' => $this->input->post('job_slug'),
+                'job_code' => $this->input->post('job_code'),
+                'job_category_id' => $this->input->post('job_category_id'),
+                'job_location_id' => $this->input->post('job_location_id'),
+                'job_sub_location' => $this->input->post('job_sub_location'),
+                'job_experience' => $this->input->post('job_experience'),
+                'job_vacancies' => $this->input->post('job_vacancies'),
+                'job_status' => $this->input->post('job_status'),
+                'job_description' => $this->input->post('job_description'),
+                'job_seo_title' => $this->input->post('job_seo_title'),
+                'job_seo_description' => $this->input->post('job_seo_description'),
+                'job_logo_text' => $this->input->post('job_logo_text'),
                 'updated_at' => $this->_created_at,
                 'updated_by' => $this->_created_by
             );
 
 
-            if ($this->candidate_model->update($candidate_id, $insert_data)) {
+            if ($this->jobs_model->update($job_id, $insert_data)) {
 
                 $this->ci_alerts->set('success', 'Updated Successfully');
-                redirect("admin/candidates/view/" . $school_id);
+                redirect("admin/jobs/view/" . $job_id);
             } else {
 
                 $this->ci_alerts->set('error', 'Sorry ! failed to save, please try again');
-                redirect("admin/candidates/view/" . $school_id);
+                redirect("admin/jobs/view/" . $job_id);
             }
         } else {
 
-            $data['menu'] = 'candidates';
+            $data['menu'] = 'jobs';
 
-            $data['school_data'] = $this->school_model->get($school_id);
-            $data['candidate_data'] = $this->candidate_model->get($candidate_id);
+            $data['job_categories'] = $this->job_categories_model->get_all();
+            $data['job_locations'] = $this->job_locations_model->get_all();
 
-            $data['page'] = 'admin/candidates/update_view';
+            $data['job_data'] = $this->jobs_model->get($job_id);
+
+            $data['page'] = 'admin/jobs/update_view';
             $this->load->view('templates/admin_template', $data);
         }
     }
 
-    function update_award()
-    {
 
-        $this->form_validation->set_rules('candidate_id', 'Candidate ID', "required");
-        $this->form_validation->set_rules('candidate_award', 'Award', 'required');
-
-
-        $this->form_validation->set_error_delimiters('<span class="help-block has-error">', '</span>');
-
-
-        if ($this->form_validation->run() == true) {
-
-            /**
-             * Create data to insert
-             */
-            $candidate_id = $this->input->post('candidate_id');
-
-            $update_data = array(
-                'candidate_award' => $this->input->post('candidate_award'),
-                'updated_at' => $this->_created_at,
-                'updated_by' => $this->_created_by
-            );
-
-
-            if ($this->candidate_model->update($candidate_id, $update_data)) {
-
-                echo "success";
-
-            } else {
-
-                echo "failed";
-            }
-        } else {
-
-
-            echo "failed";
-        }
-    }
 
     /**
      * Project view
      */
-    function view($school_id)
+    function view($job_id)
     {
 
-        if ($school_id == null) {
+        if ($job_id == null) {
 
-            $this->ci_alerts->set('error', 'School ID not found');
-            redirect('admin/candidates');
+            $this->ci_alerts->set('error', 'Job ID not found');
+            redirect('admin/jobs');
         }
 
 
-        $data['menu'] = 'candidates';
-        $data['school_id'] = $school_id;
+        $data['menu'] = 'jobs';
+        $data['job_id'] = $job_id;
 
-        $data['candidates'] = $this->candidate_model->get_candidates($school_id);
-        $data['school_data'] = $this->school_model->getOneSchools($school_id);
+        $data['job_categories'] = $this->job_categories_model->get_all();
+        $data['job_locations'] = $this->job_locations_model->get_all();
+        $data['job_data'] = $this->jobs_model->get($job_id);
+        //$data['job'] = $this->jobs_model->get_one_job($job_id);
 
-        $data['page'] = 'admin/candidates/candidates_list_view';
+        //total rows count
+        $totalRec = count($this->applicants_model->get_all_applicants(array('job_id'=>$job_id)));
+
+        //pagination configuration
+        $config['first_link']  = 'First';
+        $config['div']         = 'applicants_list'; //parent div tag id
+        $config['base_url']    = site_url().'admin/applicants/ajax_applicants/'.$job_id;
+        $config['uri_segment'] = 5;
+        $config['total_rows']  = $totalRec;
+        $config['per_page']    = $this->perPage;
+
+        $this->ajax_pagination->initialize($config);
+
+        //get the applicants data
+        $data['applicants'] = $this->applicants_model->get_all_applicants(array('limit'=>$this->perPage,'job_id'=>$job_id));
+
+        $data['page'] = 'admin/jobs/detail_view';
         $this->load->view('templates/admin_template', $data);
 
 
     }
 
+
+
+
     /**
      * Delete
      */
-    public function delete($candidate_id, $school_id)
+    public function delete($job_id)
     {
 
         $insert_data = array(
@@ -214,15 +255,15 @@ class Candidates extends CI_Controller
 
         );
 
-        if ($this->candidate_model->update($candidate_id, $insert_data)) {
+        if ($this->jobs_model->update($job_id, $insert_data)) {
 
             $this->ci_alerts->set('success', 'Deleted Successfully');
-            redirect("admin/candidates/view/" . $school_id);
+            redirect("admin/jobs/");
 
         } else {
 
             $this->ci_alerts->set('error', 'Sorry ! Deleted failed, please try again');
-            redirect("admin/candidates/view/" . $school_id);
+            redirect("admin/jobs/");
         }
     }
 
