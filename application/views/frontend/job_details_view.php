@@ -19,7 +19,7 @@
 
 <div class="page_container">
     <div class="page_heading">
-        <a href="<?php echo site_url();?>">Home</a> > <a href="<?php echo site_url('jobs-in-technopark-trivandrum');?>">Job opening</a> > <a href="#">Job details</a>
+        <a href="<?php echo site_url();?>">Home</a> > <a href="<?php echo site_url('job-listing');?>">Job Listing</a> > <a href="#">Job details</a>
     </div>
     <div class="clear"></div>
     <div class="main_box">
@@ -35,10 +35,10 @@
                 <div class="main_descri_top1">
                     Job code: <?php echo $job_data->job_code;?><br/>
                     Experience: <?php echo $job_data->job_experience;?><br/>
-                    Location: <?php echo $job_data->job_sub_location; ?>, <?php echo $job_data->job_location_title;?>
+                    Location:<?php echo $job_data->job_location_title;?>
                 </div>
                 <div class="view">
-                    <a href="<?php echo site_url();?><?php echo $job_data->job_slug; ?>/apply"><img src="/assets/frontend/images/button.png"/></a>
+                    <a href="<?php echo site_url('job-listing');?>/<?php echo $job_data->job_slug; ?>/apply"><img src="/assets/frontend/images/button.png"/></a>
                 </div>
             </div>
 
@@ -73,12 +73,12 @@
                                             <li class="span3">
                                                 <div class="caption">
                                                     <h4>Related jobs</h4>
-                                                    <p><?php echo $job->job_title; ?> - <?php echo $job->job_category_title; ?><br/>
+                                                    <p><b><?php echo $job->job_title; ?> - <?php echo $job->job_category_title; ?></b><br/>
                                                         Job code: <?php echo $job->job_code; ?><br/>
                                                         Experience: <?php echo $job->job_experience; ?><br/>
                                                         Location: <?php echo $job->job_location_title; ?>
                                                     </p><br/>
-                                                    <a href="<?php echo site_url();?><?php echo $job->job_slug; ?>"><img src="/assets/frontend/images/button_apply.png"/></a>
+                                                    <a href="<?php echo site_url('job-listing');?>/<?php echo $job->job_slug; ?>"><img src="/assets/frontend/images/button_apply.png"/></a>
                                                 </div>
                                             </li>
                                         </ul>
@@ -104,6 +104,9 @@
         <div class="main_detail">
             <div class="main_detail_fix">
                 <?php echo $job_data->job_description;?>
+                <div class="view" style="float: right">
+                    <a href="<?php echo site_url('job-listing');?>/<?php echo $job_data->job_slug; ?>/apply"><img src="/assets/frontend/images/button.png"/></a>
+                </div>
 
             </div>
         </div>

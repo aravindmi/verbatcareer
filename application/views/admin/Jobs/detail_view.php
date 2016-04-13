@@ -1,4 +1,5 @@
-<h3 class="page-header"> JOB TITLE</h3>
+<h3 class="page-header"> <?php  echo (count($job_data) > 0) ? $job_data->job_title : ''; ?> <a href="<?php echo site_url('admin/jobs/update/' . $job_data->job_id.'/'. $job_data->job_slug); ?>"
+                                                                                               class="btn btn-primary btn-circle" title="Edit"><i class="fa fa-edit"></i></a></h3>
 <div class="row">
     <div class="col-lg-3">
         <div class="panel panel-green">
@@ -6,7 +7,7 @@
                 Total Applicants
             </div>
             <div class="panel-body">
-                <h1 class="text-center">310</h1>
+                <h1 class="text-center"><?php echo isset($applicant_all_count) ? $applicant_all_count : '';?></h1>
             </div>
 
         </div>
@@ -19,7 +20,7 @@
 
             </div>
             <div class="panel-body">
-                <h1 class="text-center">100</h1>
+                <h1 class="text-center"><?php echo isset($applicant_new_count) ? $applicant_new_count : '';?></h1>
             </div>
 
         </div>
@@ -31,7 +32,7 @@
                 Shortlisted
             </div>
             <div class="panel-body">
-                <h1 class="text-center">10 </h1>
+                <h1 class="text-center"><?php echo isset($applicant_shortlist_count) ? $applicant_shortlist_count : '';?> </h1>
             </div>
 
         </div>
@@ -43,7 +44,7 @@
                 Rejected
             </div>
             <div class="panel-body">
-                <h1 class="text-center">200 </h1>
+                <h1 class="text-center"><?php echo isset($applicant_rejected_count) ? $applicant_rejected_count : '';?> </h1>
             </div>
 
         </div>
@@ -113,26 +114,27 @@
                                 <?php echo form_error('job_category_id'); ?>
 
                             </div>
+                            <div class="form-group">
+                            <label class="control-label">Location</label>
+                            <select class="form-control" name="job_location_id">
+                                <option value="" <?php echo  set_select('job_location_id', ''); ?>>Select Category</option>
+
+                                <?php if(count($job_locations) > 0){foreach ($job_locations as $job_location) {?>
+
+                                    <option value="<?php echo $job_location->job_location_id;?>"  <?php echo  set_select('job_location_id', $job_location->job_location_id,is_same($job_location->job_location_id,$job_data->job_location_id)); ?>><?php echo $job_location->job_location_title;?></option>
+
+                                <?php } }?>
+
+                            </select>
+                            <?php echo form_error('job_location_id'); ?>
+                        </div>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <label class="control-label">Location</label>
-                                <select class="form-control" name="job_location_id">
-                                    <option value="" <?php echo  set_select('job_location_id', ''); ?>>Select Category</option>
 
-                                    <?php if(count($job_locations) > 0){foreach ($job_locations as $job_location) {?>
-
-                                        <option value="<?php echo $job_location->job_location_id;?>"  <?php echo  set_select('job_location_id', $job_location->job_location_id,is_same($job_location->job_location_id,$job_data->job_location_id)); ?>><?php echo $job_location->job_location_title;?></option>
-
-                                    <?php } }?>
-
-                                </select>
-                                <?php echo form_error('job_location_id'); ?>
-                            </div>
                             <div class="form-group">
                                 <label class="control-label">Sub Location</label>
                                 <input type="text" placeholder="Sub Location" class="form-control"
-                                       name="job_experience" value="<?php echo set_value('job_sub_location',$job_data->job_sub_location); ?>"  required>
+                                       name="job_sub_location" value="<?php echo set_value('job_sub_location',$job_data->job_sub_location); ?>"  required>
                                 <?php echo form_error('job_sub_location'); ?>
                             </div>
                             <div class="form-group">
@@ -273,13 +275,26 @@
                                         </td>
 
                                         <td class="table-bordered">
-                                            <?php echo $applicant->applicant_status; ?>
+                                            <select class="form-control" id="status_<?php echo $applicant->applicant_id; ?>" onchange="update_status(<?php echo $applicant->applicant_id; ?>)">
+
+                                                <?php $applicant_status = $this->config->item('APPLICANT_STATUS');; ?>
+                                                <?php if (count($applicant_status) > 0) {
+                                                    foreach ($applicant_status as $a_s) { ?>
+
+                                                        <option
+                                                            value="<?php echo $a_s; ?>" <?php echo set_select('job_status', $a_s, is_same($a_s, $applicant->applicant_status)); ?>><?php echo show_applicant_status($a_s); ?></option>
+
+                                                    <?php }
+                                                } ?>
+
+                                            </select>
+
                                         </td>
                                         <td class="table-bordered">
-                                           <a href="<?php echo site_url('admin/applicants/view/' . $applicant->applicant_id); ?>"
+                                           <a href="<?php //echo site_url('admin/applicants/view/' . $applicant->applicant_id); ?>#"
                                             class="btn btn-success btn-circle" title="View"><i class="fa fa-eye"></i></a>
 
-                                            <a href="<?php echo site_url('admin/applicants/delete/' . $applicant->applicant_id); ?>"
+                                            <a href="<?php echo site_url('admin/applicants/delete/' . $applicant->applicant_id.'/'.$applicant->job_id); ?>"
                                                onclick="return confirm('Are you sure ?');"
                                                class="btn btn-danger btn-circle btn-icon" title="Delete"><i
                                                     class="fa fa-trash"></i></a>

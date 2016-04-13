@@ -139,24 +139,43 @@ function show_job_status($raw_id)
     }
 }
 
+function show_applicant_status($raw_id)
+{
+    switch ($raw_id) {
+
+        case "1":
+            return "New";
+            break;
+        case "2":
+            return "Shortlisted";
+            break;
+        case "3":
+            return "Rejected";
+            break;
+        default:
+            return "";
+
+    }
+}
+
 function get_email($job_location)
 {
     switch ($job_location) {
 
         case "India":
-            return "miaravindh@gmail.com";
+            return "hr.india@verbat.com";
             break;
         case "UAE":
-            return "miaravindh@gmail.com";
+            return "hr.uae@verbat.com";
             break;
         case "UK":
-            return "miaravindh@gmail.com";
+            return "hr.uk@verbat.com";
             break;
         case "USA":
-            return "miaravindh@gmail.com";
+            return "hr.usa@verbat.com";
             break;
         default:
-            return "miaravindh@gmail.com";
+            return "hr.india@verbat.com";
     }
 }
 

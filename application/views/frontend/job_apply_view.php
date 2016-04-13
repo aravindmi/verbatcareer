@@ -36,7 +36,7 @@
 
     <div class="page_heading">
 
-        <a href="<?php echo site_url();?>">Home</a> > <a href="<?php echo site_url('jobs-in-technopark-trivandrum');?>">Open Positions </a> > <a href="#">Apply Now</a>
+        <a href="<?php echo site_url();?>">Home</a> > <a href="<?php echo site_url('job-listing');?>">Job Listing </a> > <a href="#">Apply Now</a>
 
     </div>
 
@@ -47,7 +47,7 @@
 
             <div class="form_box">
 
-
+<?php if(isset($job_data->job_code) && isset($job_data->job_title)){?>
                 <div class="div-row">
 
                     <div class="divCell text-form">Job Code</div>
@@ -72,8 +72,10 @@
 
 
                 </div>
+    <br/>
+                <?php } ?>
 
-                <br/>
+
 
                 <div class="div-row">
 
@@ -93,7 +95,7 @@
 
                     <div class="divCell">
 
-                        <input name="applicant_last_name" type="text" value="<?php echo set_value('applicant_last_name'); ?>" required/>
+                        <input name="applicant_last_name" type="text" value="<?php echo set_value('applicant_last_name'); ?>"/>
                         <?php echo form_error('applicant_last_name'); ?>
 
                     </div>

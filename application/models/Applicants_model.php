@@ -5,12 +5,14 @@
  * @package Webpagetest
  * @subpackage admin
  * @category Controller
- * @author AMI 
+ * @author AMI
  * */
-class Applicants_model extends MY_Model {
+class Applicants_model extends MY_Model
+{
 
 
-    public function __construct() {
+    public function __construct()
+    {
 
         parent::__construct();
 
@@ -26,20 +28,42 @@ class Applicants_model extends MY_Model {
     {
         $this->db->select('*');
         $this->db->from($this->applicants_table);
-        $this->db->where('deleted',0);
-        $this->db->where('job_id',$params['job_id']);
-        $this->db->order_by('created_at','desc');
+        $this->db->where('deleted', 0);
+        $this->db->where('job_id', $params['job_id']);
+        $this->db->order_by('created_at', 'desc');
 
-        if(array_key_exists("start",$params) && array_key_exists("limit",$params)){
-            $this->db->limit($params['limit'],$params['start']);
-        }elseif(!array_key_exists("start",$params) && array_key_exists("limit",$params)){
+        if (array_key_exists("start", $params) && array_key_exists("limit", $params)) {
+            $this->db->limit($params['limit'], $params['start']);
+        } elseif (!array_key_exists("start", $params) && array_key_exists("limit", $params)) {
             $this->db->limit($params['limit']);
         }
 
         $query = $this->db->get();
 
-        return ($query->num_rows() > 0)? $query->result():FALSE;
+        return $query->result();
     }
+
+    function get_counts($job_id,$applicant_status)
+    {
+        $query = $this->db->select('count(applicant_id) as count')
+            ->where('deleted', 0)
+            ->where('applicant_status', $applicant_status)
+            ->where('job_id', $job_id)
+            ->get($this->applicants_table);
+        $result = $query->first_row();
+        return $result->count;
+    }
+
+    function get_count_all($job_id)
+    {
+        $query = $this->db->select('count(applicant_id) as count')
+            ->where('deleted', 0)
+            ->where('job_id', $job_id)
+            ->get($this->applicants_table);
+        $result = $query->first_row();
+        return $result->count;
+    }
+
 
 }
 

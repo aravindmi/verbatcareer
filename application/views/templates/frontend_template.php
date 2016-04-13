@@ -14,8 +14,9 @@
 
     <meta name="Robots" content="noindex, nofollow, default" />
 
-    <title><?php if(isset($title)){echo $title;}else{echo "Software Development Companies in India | Kerala | Jobs";}?></title>
 
+    <title><?php if(isset($title)){echo $title;}else{echo "Software Development Companies in India | Kerala | Jobs";}?></title>
+    <link rel="shortcut icon" href="/assets/frontend/images/favicon.ico" />
 
 
     <!--[if lt IE 9]>
@@ -63,7 +64,7 @@
 
         <div class="head_right">
 
-            <a href="http://www.verbat.com/" target="_blank">Home</a>  &nbsp;|&nbsp;
+            <a href="<?php echo site_url();?>">Home</a>  &nbsp;|&nbsp;
 
             <a href="http://www.verbat.com/" target="_blank">About Verbat</a>  &nbsp;|&nbsp;
 

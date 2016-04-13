@@ -51,8 +51,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller'] = 'home';
 $route['admin'] = 'admin/dashboard';
-$route['jobs-in-technopark-trivandrum'] = 'jobs';
-$route['(:any)'] = 'jobs/view/$1';
-$route['(:any)/apply'] = 'jobs/apply/$1';
+
+
+$route['job-listing'] = 'jobs/index';
+
+$route['job-listing/(:any)'] = 'jobs/view/$1';
+
+$route['submit-resume'] = 'jobs/submit_resume';
+
+$route['job-listing/(:any)/apply'] = 'jobs/apply/$1';
+
+
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

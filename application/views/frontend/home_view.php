@@ -27,7 +27,7 @@
 
 
 
-                <a href="<?php echo site_url('jobs-in-technopark-trivandrum');?>" class="button button--wayra button--border-thin button--round-s">Open Positions</a>
+                <a href="<?php echo site_url('job-listing');?>" class="button button--wayra button--border-thin button--round-s">Job Listing</a>
 
 
 
@@ -35,7 +35,7 @@
 
                     <span class="button_sty">
 
-                        <a href="#">Open Positions</a>
+                        <a href="#">Job Listing</a>
 
                     </span>
 
@@ -97,9 +97,9 @@
 
             <div class="main_top_second2">
 
-                <h3>Open Positions</h3>
+                <h3>Job Listing</h3>
 
-                <a href="<?php echo site_url('jobs-in-technopark-trivandrum');?>"><img src="/assets/frontend/images/arrow.png" class="submit-pic"/></a>
+                <a href="<?php echo site_url('job-listing');?>"><img src="/assets/frontend/images/arrow.png" class="submit-pic"/></a>
 
             </div>
 
@@ -108,7 +108,7 @@
 
                 <span>Join us and build your career in Digital</span>
 
-                <a href="<?php echo site_url('jobs-in-technopark-trivandrum');?>"><img src="/assets/frontend/images/arrow.png" class="submit-pic"/></a>
+                <a href="<?php echo site_url('submit-resume');?>"><img src="/assets/frontend/images/arrow.png" class="submit-pic"/></a>
 
 
             </div>

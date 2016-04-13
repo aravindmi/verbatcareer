@@ -12,7 +12,7 @@
 
             <div class="text_strip">
 
-                <h3>Open Positions</h3>
+                <h3>Job Listing</h3>
 
             </div>
 
@@ -40,7 +40,7 @@
 
     <div class="page_heading">
 
-        <a href="<?php echo site_url();?>">Home</a> > <a href="#">Open Positions </a>
+        <a href="<?php echo site_url();?>">Home</a> > <a href="#">Job Listing </a>
 
     </div>
 
@@ -56,27 +56,29 @@
 
                 <p>Fliter</p>
 
-                <form>
+                <form method="post">
 
-                    <select class="filter_sty" name="category" id="category">
-                        <option value="">Select Category</option>
+                    <select class="filter_sty" name="category_id" id="category">
+                          <option value="">All Category</option>
                         <?php if(count($job_categories) > 0){foreach ($job_categories as $job_category) {?>
 
-                            <option value="<?php echo $job_category->job_category_id;?>"><?php echo $job_category->job_category_title;?></option>
+                            <option value="<?php echo $job_category->job_category_id;?>" <?php echo (is_same($job_category->job_category_id,$category_id)) ? 'selected="selected"':'';?>><?php echo $job_category->job_category_title;?></option>
 
                         <?php } }?>
                     </select>
 
-                    <select class="filter_sty" name="location" id="location">
-                        <option value="">Select Location</option>
+                    <select class="filter_sty" name="location_id" id="location">
+                        <option value="">All Location</option>
                         <?php if(count($job_locations) > 0){foreach ($job_locations as $job_location) {?>
 
-                            <option value="<?php echo $job_location->job_location_id;?>"><?php echo $job_location->job_location_title;?></option>
+                            <option value="<?php echo $job_location->job_location_id;?>" <?php echo (is_same($job_location->job_location_id,$location_id)) ? 'selected="selected"':'';?> ><?php echo $job_location->job_location_title;?></option>
 
                         <?php } }?>
 
 
                     </select>
+					
+					<input type="submit" value="Filter" class="button-filter">
 
                 </form>
 
@@ -104,11 +106,11 @@
 
                 <div class="list_circle_text">
 
-                    <a href="<?php echo site_url();?><?php echo $job->job_slug; ?>"><p> <?php echo $job->job_title; ?></p></a>
+                    <a href="<?php echo site_url('job-listing');?>/<?php echo $job->job_slug; ?>"><p> <?php echo $job->job_title; ?></p></a>
 
-                        <span>Posted :-  <?php echo show_date($job->created_at); ?><br/>
+                        <span>Posted :  <?php echo show_date($job->created_at); ?><br/>
                             Experience: <?php echo $job->job_experience; ?><br/>
-                            Location: <?php echo $job->job_sub_location; ?>,<?php echo $job->job_location_title; ?>
+                            Location: <?php echo $job->job_location_title; ?>
 
                         </span>
 
@@ -116,11 +118,11 @@
 
                 </div>
 
-                <a href="<?php echo site_url();?><?php echo $job->job_slug; ?>"><img src="assets/frontend/images/listing_button.png"/></a>
+                <a href="<?php echo site_url('job-listing');?>/<?php echo $job->job_slug; ?>"><img src="/assets/frontend/images/listing_button.png"/></a>
 
             </div>
 
-<?php }} ?>
+<?php }}else{echo "<p style='color:grey'>Sorry! No open position found for the filter you have selected.</p>";} ?>
     </div>
 
     <div class="clear"></div>

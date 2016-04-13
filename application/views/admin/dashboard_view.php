@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge"><?php echo $jobs_count;?></div>
-                    <div>Jobs</div>
+                    <div>Total Opportunities</div>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge"><?php echo $applicants_count;?></div>
-                    <div>Applicants</div>
+                    <div>Total Applicants</div>
                 </div>
             </div>
         </div>

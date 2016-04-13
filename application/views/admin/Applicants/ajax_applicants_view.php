@@ -33,13 +33,25 @@
 
 
                 <td class="table-bordered">
-                    <?php echo $applicant->applicant_status; ?>
+                    <select class="form-control" id="status_<?php echo $applicant->applicant_id; ?>" onchange="update_status(<?php echo $applicant->applicant_id; ?>)">
+
+                    <?php $applicant_status = $this->config->item('APPLICANT_STATUS');; ?>
+                        <?php if (count($applicant_status) > 0) {
+                            foreach ($applicant_status as $a_s) { ?>
+
+                                <option
+                                    value="<?php echo $a_s; ?>" <?php echo set_select('job_status', $a_s, is_same($a_s, $applicant->applicant_status)); ?>><?php echo show_applicant_status($a_s); ?></option>
+
+                            <?php }
+                        } ?>
+
+                    </select>
                 </td>
                 <td class="table-bordered">
                     <a href="<?php echo site_url('admin/applicants/view/' . $applicant->applicant_id); ?>"
                        class="btn btn-success btn-circle" title="View"><i class="fa fa-eye"></i></a>
 
-                   <a href="<?php echo site_url('admin/applicants/delete/' . $applicant->applicant_id); ?>"
+                   <a href="<?php echo site_url('admin/applicants/delete/' . $applicant->applicant_id.'/'.$applicant->job_id); ?>"
                        onclick="return confirm('Are you sure ?');"
                        class="btn btn-danger btn-circle btn-icon" title="Delete"><i
                             class="fa fa-trash"></i></a>

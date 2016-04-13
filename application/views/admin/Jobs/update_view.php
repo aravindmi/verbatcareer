@@ -47,8 +47,6 @@
                                 <?php echo form_error('job_category_id'); ?>
 
                             </div>
-                        </div>
-                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="control-label">Location</label>
                                 <select class="form-control" name="job_location_id">
@@ -63,12 +61,10 @@
                                 </select>
                                 <?php echo form_error('job_location_id'); ?>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label">Sub Location</label>
-                                <input type="text" placeholder="Sub Location" class="form-control"
-                                       name="job_experience" value="<?php echo set_value('job_sub_location',$job_data->job_sub_location); ?>"  required>
-                                <?php echo form_error('job_sub_location'); ?>
-                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+
                             <div class="form-group">
                                 <label class="control-label">Experience</label>
                                 <input type="text" placeholder="Experience" class="form-control"
@@ -96,6 +92,21 @@
 
                                 </select>
                                 <?php echo form_error('job_status'); ?>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">To Email</label>
+                                <select class="form-control" name="job_email_id">
+                                    <option value="" <?php echo  set_select('job_email_id', ''); ?>>Select Email</option>
+
+                                    <?php if(count($job_emails) > 0){foreach ($job_emails as $job_email) {?>
+
+                                        <option value="<?php echo $job_email->job_email_id;?>"  <?php echo  set_select('job_email_id', $job_email->job_email_id,is_same($job_email->job_email_id,$job_data->job_email_id)); ?>><?php echo $job_email->job_email_title;?></option>
+
+                                    <?php } }?>
+
+                                </select>
+                                <help> <em>Email to which application details to be send.</em></help>
+                                <?php echo form_error('job_email_id'); ?>
                             </div>
                         </div>
                         <div class="col-md-12">

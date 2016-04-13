@@ -84,6 +84,7 @@ $config['SUPERVISOR_UPLOAD_TYPES'] = 'xls|xlsx';
 $config['SUPERVISOR_UPLOAD_SIZE_LIMIT'] = '10000';
 
 $config['JOB_STATUS'] = array(1,0);
+$config['APPLICANT_STATUS'] = array(1,2,3);
 
 /* End of file site.constants.php */
 /* Location: ./application/config/site.constants.php */

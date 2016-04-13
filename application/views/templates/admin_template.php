@@ -170,16 +170,29 @@
                            class="<?php echo isset($menu) && $menu == 'jobs' ? 'active' : ''; ?>"><i
                                 class="fa fa-university fa-fw"></i> Opportunities</a>
                     </li>
-                    <!--<li>
-                        <a href="<?php echo site_url('admin/applicants'); ?>"
-                           class="<?php echo isset($menu) && $menu == 'applicants' ? 'active' : ''; ?>"><i
-                                class="fa fa-users fa-fw"></i> Applicants</a>
-                    </li>-->
+
                     <li>
-                        <a href="<?php //echo site_url('admin/reports'); ?>#"
-                           class="<?php echo isset($menu) && $menu == 'reports' ? 'active' : ''; ?>"><i
-                                class="fa fa-bar-chart-o fa-fw"></i> Reports</a>
+                        <a href="#"><i class="fa fa-gears fa-fw"></i> Settings<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse out" aria-expanded="false">
+                            <li>
+                                <a href="<?php echo site_url('admin/locations'); ?>"
+                                   class="<?php echo isset($menu) && $menu == 'locations' ? 'active' : ''; ?>"><i
+                                        class="fa fa-location-arrow fa-fw"></i> Locations</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url('admin/categories'); ?>"
+                                   class="<?php echo isset($menu) && $menu == 'categories' ? 'active' : ''; ?>"><i
+                                        class="fa fa-credit-card fa-fw"></i> Categories</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo site_url('admin/emails'); ?>"
+                                   class="<?php echo isset($menu) && $menu == 'emails' ? 'active' : ''; ?>"><i
+                                        class="fa fa-mail-forward fa-fw"></i> Emails</a>
+                            </li>
+                        </ul>
+                        <!-- /.nav-second-level -->
                     </li>
+
 
                 </ul>
             </div>
@@ -312,14 +325,14 @@
 
     }
 
-    var update_award = function (can_id){
+    var update_status = function (applicant_id){
 
-        var sid = 'award_'+can_id;
-        var award = $('#'+sid).val();
+        var sid = 'status_'+applicant_id;
+        var status = $('#'+sid).val();
         $.ajax({
             type: 'POST',
-            url: '<?php echo site_url();?>admin/candidates/update_award',
-            data: { candidate_id: can_id, candidate_award: award },
+            url: '<?php echo site_url();?>admin/applicants/update_status',
+            data: { applicant_id: applicant_id, applicant_status: status },
             beforeSend:function(){
                 // this is where we append a loading image
                 $('#ajax-panel').empty();

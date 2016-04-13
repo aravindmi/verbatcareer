@@ -40,7 +40,7 @@
 
     <div class="page_heading">
 
-        <a href="<?php echo site_url();?>">Home</a> > <a href="<?php echo site_url('jobs-in-technopark-trivandrum');?>">Open Positions </a> > <a href="#">Thank you</a>
+        <a href="<?php echo site_url();?>">Home</a> > <a href="<?php echo site_url('job-listing');?>">Job Listing </a> > <a href="#">Thank you</a>
 
     </div>
 
@@ -53,9 +53,9 @@
             <h5>Thank you for submitting your resume at Verbat</h5>
 
             <img src="/assets/frontend/images/thank.png"/>
-
-            <p>Your reference # is <strong>VT<?php echo isset($applicant_id) ? $applicant_id : '';?> </strong></p>
-
+            <?php if(isset($applicant_id) && $applicant_id != ''){?>
+            <p>Your reference # is <strong>VT<?php echo $applicant_id;?> </strong></p>
+            <?php }else{ echo '<br>';} ?>
             <span>We shall contact you as soon as possible</span>
 
         </div>

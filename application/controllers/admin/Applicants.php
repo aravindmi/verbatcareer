@@ -63,11 +63,33 @@ class Applicants extends CI_Controller
         $this->load->view('admin/applicants/ajax_applicants_view', $data, false);
     }
 
+    public function delete($applicant_id,$job_id)
+    {
+
+        $insert_data = array(
+            'deleted' => 1,
+            'updated_at' => $this->_created_at,
+            'updated_by' => $this->_created_by
+
+        );
+
+        if ($this->applicants_model->update($applicant_id, $insert_data)) {
+
+            $this->ci_alerts->set('success', 'Deleted Successfully');
+            redirect("admin/jobs/view/".$job_id);
+
+        } else {
+
+            $this->ci_alerts->set('error', 'Sorry ! Deleted failed, please try again');
+            redirect("admin/jobs/view/".$job_id);
+        }
+    }
+
     function update_status()
     {
 
-        $this->form_validation->set_rules('candidate_id', 'Candidate ID', "required");
-        $this->form_validation->set_rules('candidate_award', 'Award', 'required');
+        $this->form_validation->set_rules('applicant_id', 'Applicant ID', "required");
+        $this->form_validation->set_rules('applicant_status', 'Status', 'required');
 
 
         $this->form_validation->set_error_delimiters('<span class="help-block has-error">', '</span>');
@@ -78,16 +100,16 @@ class Applicants extends CI_Controller
             /**
              * Create data to insert
              */
-            $candidate_id = $this->input->post('candidate_id');
+            $applicant_id = $this->input->post('applicant_id');
 
             $update_data = array(
-                'candidate_award' => $this->input->post('candidate_award'),
+                'applicant_status' => $this->input->post('applicant_status'),
                 'updated_at' => $this->_created_at,
                 'updated_by' => $this->_created_by
             );
 
 
-            if ($this->candidate_model->update($candidate_id, $update_data)) {
+            if ($this->applicants_model->update($applicant_id, $update_data)) {
 
                 echo "success";
 

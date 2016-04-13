@@ -16,6 +16,7 @@ class Job_categories_model extends MY_Model {
 
         $this->_table = 'job_categories';
         $this->primary_key = 'job_category_id';
+        $this->soft_delete = TRUE;
 
     }
 

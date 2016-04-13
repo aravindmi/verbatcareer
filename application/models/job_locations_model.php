@@ -16,6 +16,7 @@ class Job_locations_model extends MY_Model {
 
         $this->_table = 'job_locations';
         $this->primary_key = 'job_location_id';
+        $this->soft_delete = TRUE;
 
     }
 
